@@ -45,4 +45,10 @@ jobs:
           done< <(jq -j 'to_entries|.[] | "\(.key) \(.value)\t"' <<< "$secrets")
           echo "T1: ${T1}"
           echo "T2: env.T2"
+       
+             # Runs a set of commands using the runners shell
+      - name: Run aaa
+        run: |
+          echo "T1: ${T1}"
+          echo "T2: env.T2"
           
