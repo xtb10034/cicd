@@ -43,5 +43,5 @@ jobs:
               echo $key'='$value >> $GITHUB_ENV
             fi
           done< <(jq -j 'to_entries|.[] | "\(.key) \(.value)\t"' <<< "$secrets")
-          echo $t1
+          echo "T1: ${T1}"
           
